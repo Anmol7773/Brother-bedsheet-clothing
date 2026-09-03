@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrotherAttire | Luxury Collection</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b0b0d;color:#f8f4eb;font:15px Arial,sans-serif}header{position:sticky;top:0;z-index:5;background:#0b0b0df2;border-bottom:1px solid #3b3327}.nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.logo{font:bold 23px Georgia;letter-spacing:2px}.logo span,h1 span,h2{color:#d7b56d}nav a{color:white;text-decoration:none;margin-left:16px}.hero{text-align:center;padding:105px 20px;background:radial-gradient(circle,#443720 0,#17130e 25%,#0b0b0d 65%)}h1{font:700 clamp(44px,10vw,86px) Georgia;margin:15px 0}.hero p{max-width:650px;margin:auto;color:#bbb;line-height:1.7}.btn{display:inline-block;border:1px solid #d7b56d;border-radius:28px;padding:13px 20px;margin:22px 5px 0;background:#d7b56d;color:#111;text-decoration:none;font-weight:bold}.alt{background:transparent;color:#d7b56d}section{max-width:1100px;margin:auto;padding:60px 20px}.title{text-align:center;margin-bottom:30px}.title h2{font:700 36px Georgia;color:#d7b56d}.title p,.muted{color:#aaa}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.card,.box{background:#151519;border:1px solid #302d28;border-radius:17px;padding:20px}.card h3{margin-top:0}.price{color:#d7b56d;font-weight:bold}.pic{height:120px;border-radius:12px;background:linear-gradient(135deg,#30271b,#101014);display:grid;place-items:center;font:700 18px Georgia;color:#8f774c;margin-bottom:15px}label{display:block;color:#aaa;font-size:13px;margin:12px 0 5px}select,input,textarea{width:100%;padding:11px;border-radius:8px;border:1px solid #39362f;background:#0c0c0f;color:white}.product button{width:100%;padding:11px;margin-top:14px;border:0;border-radius:9px;background:#d7b56d;font-weight:bold}.pay{max-width:650px;margin:auto}.copy{cursor:pointer;background:#d7b56d;border:0;border-radius:8px;padding:8px;margin-left:6px}.policy{line-height:1.7;color:#bbb}.welcome{position:fixed;inset:0;background:#050506ee;z-index:20;display:grid;place-items:center;padding:20px}.welcome .box{text-align:center;max-width:480px;background:linear-gradient(145deg,#211b12,#101014);border:1px solid #d7b56d;border-radius:22px;padding:38px}.hide{display:none!important}footer{text-align:center;padding:35px 20px;border-top:1px solid #302d28;color:#aaa}@media(max-width:650px){nav{display:none}}
+</style>
+</head>
+<body>
+<div class="welcome" id="welcome"><div class="box"><div style="letter-spacing:4px;color:#aaa">WELCOME TO</div><h2 style="font-size:36px">BROTHERATTIRE</h2><p class="muted">Luxury style • Everyday comfort • Jaipur</p><button class="btn" onclick="document.getElementById('welcome').classList.add('hide')">ENTER STORE</button></div></div>
+<header><div class="nav"><div class="logo">BROTHER<span>ATTIRE</span></div><nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#payment">Payment</a><a href="#contact">Contact</a></nav></div></header>
+<section class="hero" id="home"><div><div style="letter-spacing:5px;color:#d7b56d">JAIPUR • LUXURY COLLECTION</div><h1>BROTHER<span>ATTIRE</span></h1><p>Shop bedsheets and fashion wear for men and women. Choose your product, size and colour, then send your order directly on WhatsApp.</p><a class="btn" href="#shop">EXPLORE COLLECTION</a><a class="btn alt" href="https://instagram.com/brotherattire" target="_blank">INSTAGRAM</a></div></section>
+<section id="shop"><div class="title"><h2>Shop Collection</h2><p>Select size and colour for each item.</p></div><div class="grid" id="products"></div></section>
+<section id="payment"><div class="title"><h2>Online Payment</h2><p>COD is also available. For online payment, use the UPI ID below.</p></div><div class="box pay"><p><b>UPI ID:</b> <span id="upi">7374040517@ybl</span> <button class="copy" onclick="navigator.clipboard.writeText('7374040517@ybl');this.textContent='Copied!'">Copy</button></p><p class="muted">After payment, use the order form below and send your details on WhatsApp.</p></div></section>
+<section><div class="title"><h2>Delivery & Order Details</h2><p>Your selected product will be included automatically.</p></div><div class="box pay">
+<label>Full Name</label><input id="name" placeholder="Your name"><label>Mobile Number</label><input id="phone" inputmode="numeric" placeholder="10-digit number"><label>Full Delivery Address</label><textarea id="address" rows="3" placeholder="House / street / area"></textarea><label>Landmark</label><input id="landmark" placeholder="Nearby landmark"><label>PIN Code</label><input id="pin" inputmode="numeric" placeholder="302034"><label>Payment Method</label><select id="method"><option>Cash on Delivery (COD)</option><option>Online Payment - 7374040517@ybl</option></select>
+<button class="btn" style="width:100%" onclick="sendOrder()">SEND ORDER ON WHATSAPP</button><a class="btn alt" style="width:100%;text-align:center" href="https://instagram.com/brotherattire" target="_blank">ORDER / ENQUIRE ON INSTAGRAM</a></div></section>
+<section id="contact"><div class="title"><h2>Visit BrotherAttire</h2></div><div class="grid"><div class="box"><b>📍 Address</b><p class="muted">B-33B, Murti Nagar, Meenawala, Sirsi Road, Jaipur – 302034</p></div><div class="box"><b>📞 Call / WhatsApp</b><p><a style="color:#d7b56d" href="tel:+9173740517">7374040517</a></p></div><div class="box"><b>📸 Instagram</b><p><a style="color:#d7b56d" href="https://instagram.com/brotherattire" target="_blank">@brotherattire</a></p></div></div></section>
+<section><div class="box policy"><h2>Terms & Return Policy</h2><p>Orders can be placed through this website. Cash on Delivery (COD) is available, and online payment can be made using the displayed UPI ID.</p><p>Return, replacement or refund may be available for eligible items. <b>Return requests must be made within 24 hours of delivery; requests after 24 hours will not be accepted.</b> Please contact BrotherAttire promptly with your order details.</p></div></section>
+<footer>© 2026 BROTHERATTIRE • BEDSHEET & CLOTHING<br><span class="muted">Comfort • Style • Quality • Jaipur</span></footer>
+<script>
+const products=[
+['Bedsheet','₹160 – ₹1,000',['Single Bed','Double Bed','Queen Size','King Size'],['Multi Colour','Blue','Green','Pink','Other']],
+['T-Shirt','₹250 – ₹500',['S','M','L','XL','XXL'],['Black','White','Blue','Red','Other']],
+['Kurtis','Contact for price',['S','M','L','XL','XXL'],['Black','White','Blue','Pink','Other']],
+['Lowers','₹350 – ₹700',['M','L','XL','XXL'],['Black','Grey','Blue','Other']],
+['Trousers','₹350 – ₹750',['28','30','32','34','36','38'],['Black','Grey','Blue','Other']]
+];
+let selected=null;
+document.getElementById('products').innerHTML=products.map((p,i)=>`<div class="card product"><div class="pic">${p[0]}</div><h3>${p[0]}</h3><div class="price">${p[1]}</div><label>Size</label><select id="s${i}">${p[2].map(x=>`<option>${x}</option>`).join('')}</select><label>Colour</label><select id="c${i}">${p[3].map(x=>`<option>${x}</option>`).join('')}</select><button onclick="choose(${i})">SELECT PRODUCT</button></div>`).join('');
+function choose(i){selected={name:products[i][0],price:products[i][1],size:document.getElementById('s'+i).value,color:document.getElementById('c'+i).value};location.hash='order';alert(selected.name+' selected. Please fill delivery details.')}
+function sendOrder(){if(!selected)return alert('Please select a product first.');let n=document.getElementById('name').value.trim(),ph=document.getElementById('phone').value.trim(),ad=document.getElementById('address').value.trim(),lm=document.getElementById('landmark').value.trim(),pin=document.getElementById('pin').value.trim(),m=document.getElementById('method').value;if(!n||!ph||!ad||!lm||!pin)return alert('Please fill all delivery details.');let msg=`BROTHERATTIRE ORDER
+Product: ${selected.name}
+Price: ${selected.price}
+Size: ${selected.size}
+Colour: ${selected.color}
+Payment: ${m}
+
+Customer: ${n}
+Mobile: ${ph}
+Address: ${ad}
+Landmark: ${lm}
+Pincode: ${pin}`;location.href='https://wa.me/9173740517?text='+encodeURIComponent(msg)}
+</script>
+</body></html>
